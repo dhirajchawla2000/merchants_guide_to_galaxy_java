@@ -59,7 +59,7 @@ I have no idea what you are talking about
 
 ####Introduction
 
-The problem statement I have selected here is Merchants Guide to Galaxy, wherein I need to develop a guide that would allow me to convert (translate) numbers and units while selling stuff in other galaxies. For this problem statement I have used Java as the programming language to develop the code and write test cases. I have tried to use TDD methodology for the development of the code.
+The problem statement I have selected here is Merchants Guide to Galaxy, wherein I need to develop a guide that would allow me to convert (translate) numbers and units while selling stuff in other galaxies. For this problem statement I have used Java as the programming language to develop the code and write test cases.
 
 ####Design
 
@@ -71,11 +71,11 @@ Below mentioned is the design that I have used to develop the code for the selec
 - Package com.guide.merchant.databank contains DataBank class, that stores the mapping of Roman numerals to their meant word and mapping of credit value of each item being sold.
 - Package com.guide.merchant.roman contains RomanNumber class, that converts a given Roman number to it's corresponding Arabic value.
 - Package com.guide.merchant.command contains 5 classes for each command type that can be generated from reading the input data which are implemented from ICommand interface. These classes are:
-  - AssignmentCommand: This class executes command statement like "pish is I", i.e. pish = I
-  - CreditAssignCommand: This class executes command statement like "pish Iron is 10 Credits", i.e. Iron = 10
-  - HowMuchCommand: This class executes command statement like "how much is pish ?"
-  - HowManyCommand: This class executes command statement like "how many Credits is pish Iron ?"
-  - UnknownCommand: This class executes command that is not a valid command statement with an error message
+  - **AssignmentCommand:** This class executes command statement like "pish is I", i.e. pish = I
+  - **CreditAssignCommand:** This class executes command statement like "pish Iron is 10 Credits", i.e. Iron = 10
+  - **HowMuchCommand:** This class executes command statement like "how much is pish ?"
+  - **HowManyCommand:** This class executes command statement like "how many Credits is pish Iron ?"
+  - **UnknownCommand:** This class executes command that is not a valid command statement with an error message
 - Unit test cases have been implemented for the classes.
 
 ####Environment Used
