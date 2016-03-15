@@ -42,6 +42,24 @@ public class DataBank {
 	}
 
 	/*
+	 * This method parses the words in the string and returns the
+	 * equivalent Roman Numeral based information stored in the bank
+	 */
+	public String getRomanFromString(String words){
+		String[] wordArray = words.split("\\s+");
+		String roman = "";
+		for (String word : wordArray) {
+			String meaning = assignmentMap.get(word);
+			if (meaning == null) {
+				// One of the word was invalid in the string of words
+				return "";
+			}
+			roman += meaning;
+		}
+		return roman;
+	}
+
+	/*
 	 * This method stores the mapping of item to it's credit value
 	 * @param item
 	 * @param value

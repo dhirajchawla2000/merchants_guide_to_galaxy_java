@@ -25,19 +25,9 @@ public class HowManyCommand implements ICommand {
 
 	@Override
 	public void execute() {
-		boolean notFound = false;
-		String[] wordArray = words.split("\\s+");
-		String roman = "";
-		for (String word : wordArray) {
-			String meaning = bank.getAssignment(word);
-			if (meaning == null) {
-				notFound = true;
-				break;
-			}
-			roman += meaning;
-		}
+		String roman = bank.getRomanFromString(words);
 
-		if (notFound || roman == "" || bank.getCredit(item) == null) {
+		if (roman == "" || bank.getCredit(item) == null) {
 			System.out.println(WRONG_COMMAND_MESSAGE);
 			return;
 		}

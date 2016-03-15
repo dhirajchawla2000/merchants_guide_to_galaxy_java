@@ -67,6 +67,9 @@ public class MerchantsGuide {
 				}
 				commands.clear();
 			}
+			else {
+				System.out.println("No file given as input. Please provide a valid input file.");
+			}
 		}
 		catch (IOException e) {
 			System.out.println(e.getMessage());
